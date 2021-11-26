@@ -1,5 +1,7 @@
 package se.lexicon.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import se.lexicon.dao.sequencer.Sequencers;
 import se.lexicon.model.entity.Student;
 
@@ -8,14 +10,16 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Optional;
 
+@Component
 public class StudentDAOImpl implements StudentDAO{
 
     private final Collection<Student> students;
     private final Sequencers sequencers;
 
+    @Autowired
     public StudentDAOImpl(Sequencers sequencers) {
-        this.sequencers = sequencers;
         students = new HashSet<>();
+        this.sequencers = sequencers;
     }
 
     @Override

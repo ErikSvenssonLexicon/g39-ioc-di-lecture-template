@@ -1,11 +1,13 @@
 package se.lexicon.service;
 
+import org.springframework.stereotype.Service;
 import se.lexicon.dao.StudentDAO;
 import se.lexicon.model.dto.StudentFormDTO;
 import se.lexicon.model.entity.Student;
 
 import java.util.Collection;
 
+@Service
 public class StudentServiceImpl implements StudentService{
 
     private final StudentDAO studentDAO;

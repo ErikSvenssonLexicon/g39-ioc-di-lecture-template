@@ -1,5 +1,8 @@
 package se.lexicon.dao.sequencer;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class SequencersImpl implements Sequencers{
 
     private Integer studentId = 0;
